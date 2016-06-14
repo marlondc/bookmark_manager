@@ -1,0 +1,10 @@
+<title>Bookmark Manage | Filtered Tags</title>
+
+<ul id="links">
+
+	<%= Link.map do |link| 
+			if link.tags.map(&:name).include?("bubble")
+				"<li><a title='#{link.title}' href='http://#{link.url}' target='_blank'>#{link.title}</a> #{link.tags.map(&:name).join(" ")}</li>"
+			end
+		end.join("\n") %>
+</ul>
