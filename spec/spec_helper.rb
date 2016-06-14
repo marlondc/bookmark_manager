@@ -7,7 +7,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require './app/models/link'
+require './app/models/data_mapper_setup'
 require 'database_cleaner'
 
 Capybara.app = BookmarkManager
@@ -33,5 +33,3 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
-
-p ENV['RACK_ENV']

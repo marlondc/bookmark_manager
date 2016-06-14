@@ -2,6 +2,6 @@
 
 <ul id="links">
 
-	<%= Link.map { |link| "<li><a title='#{link.title}' href='//#{link.url}' target='_blank'>#{link.title}</a></li>" }.join("\n") %>
+	<%= Link.map { |link| "<li><a title='#{link.title}' href='//#{link.url}' target='_blank'>#{link.title}</a> #{link.tags.map(&:name).join(" ")}</li>" }.join("\n") %>
 
 </ul>
