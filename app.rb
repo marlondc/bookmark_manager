@@ -6,6 +6,7 @@ require './app/models/link'
 
 class BookmarkManager < Sinatra::Base
 
+  DataMapper.setup(:default, )
 
 	enable :sessions
 
