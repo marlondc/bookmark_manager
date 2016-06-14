@@ -1,4 +1,7 @@
+<title>Bookmark Manage | Links</title>
+
 <ul id="links">
-  <li><a href="www.google.com">google</a></li>
-  <li><a href="www.bing.com">bing</a></li>
+
+	<%= Link.map { |link| "<li><a title='#{link.title}' href='//#{link.url}' target='_blank'>#{link.title}</a></li>" }.join("\n") %>
+
 </ul>
