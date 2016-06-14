@@ -11,8 +11,8 @@ feature 'Creating a link' do
     expect(current_path).to eq '/links'
 
     within 'ul#links' do
-      expect(page).to have_link('google', :href => 'www.google.com')
-      Link.last.destroy
+      expect(page).to have_link('google', :href => '//www.google.com')
+      # Link.last.destroy
     end
   end
 end

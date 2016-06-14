@@ -1,9 +1,16 @@
 source "https://rubygems.org"
 
-gem "data_mapper"
-gem "dm-postgres-adapter"
-gem "rspec-sinatra"
-gem "rspec"
-gem "sinatra"
-gem "capybara"
-gem "rerun"
+group :production do
+  gem "data_mapper"
+  gem "dm-postgres-adapter"
+  gem "sinatra"
+  gem "rerun"
+end
+
+group :test do
+    gem "database_cleaner"
+    gem "capybara"
+    gem "rspec-sinatra"
+    gem "rspec"
+    
+end
