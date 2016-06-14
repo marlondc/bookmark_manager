@@ -3,7 +3,6 @@ ENV["RACK_ENV"] ||= "development"
 require 'sinatra/base'
 require './app/models/link'
 
-
 class BookmarkManager < Sinatra::Base
 
 	enable :sessions
