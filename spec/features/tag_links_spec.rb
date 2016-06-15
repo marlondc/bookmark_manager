@@ -19,8 +19,7 @@ feature 'add tags' do
     click_button 'Submit'
 
     link = Link.first
-    expect(link.tags.map(&:name)).to include('greetings')
-    expect(link.tags.map(&:name)).to include('goodbye')
+    expect(link.tags.map(&:name)).to include('greetings','goodbye')
 
 
   end

@@ -16,6 +16,7 @@ gem 'rspec-sinatra'
 gem 'sinatra-base'
 gem 'EmojifyRspecFormatter', '~> 0.1.4'
 gem 'sinatra'
+gem 'rake'
 
 
 
