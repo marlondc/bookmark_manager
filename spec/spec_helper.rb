@@ -8,7 +8,6 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
-require './app/models/link.rb'
 require './app/app.rb'
 require 'database_cleaner'
 

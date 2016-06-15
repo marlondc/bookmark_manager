@@ -4,9 +4,7 @@ ENV['RACK_ENV'] ||= 'development'
 # Bundler.require(:default, RACK_ENV)
 
 require 'sinatra/base'
-require_relative 'models/link'
 require_relative 'data_mapper_setup'
-require_relative 'models/tag'
 
 class BookmarkManager < Sinatra::Base
 
@@ -25,6 +23,12 @@ class BookmarkManager < Sinatra::Base
     link.tags << tag
     link.save
     redirect '/links'
+  end
+
+  get '/tags/:name' do
+    tag = Tag.first(name: params[:name])
+    @links = tag ? tag.links : []
+    erb :'links/index'
   end
 
 
