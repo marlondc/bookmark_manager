@@ -124,6 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   EmojifyRspecFormatter (~> 0.1.4)
+  bcrypt
   capybara
   data_mapper
   database_cleaner
