@@ -11,7 +11,7 @@ feature 'add tags' do
   end
 
 
-  scenario 'add multiple tagas to a link' do
+  scenario 'add multiple tags to a link' do
     visit('/links/new')
     fill_in :title, with: 'hello'
     fill_in :url, with: 'www.hello.com'
