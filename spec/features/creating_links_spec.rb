@@ -1,4 +1,4 @@
-require 'spec_helper'
+# require 'spec_helper'
 
 feature 'Creating a link' do
 
@@ -20,10 +20,10 @@ feature 'Creating a link' do
   visit '/links/new'
   fill_in('title', with: 'google')
   fill_in('url', with: 'www.google.com')
-  fill_in('tags', with: 'search engine')
+  fill_in('tags', with: 'google')
   click_button('Create link')
   link = Link.first
   expect(current_path).to eq '/links'
-  expect(link.tags.map(&:name)).to include('search engine')
+  expect(link.tags.map(&:name)).to include('google')
   end
 end

@@ -1,4 +1,4 @@
-require 'spec_helper'
+# require 'spec_helper'
 
 feature 'List of links on homepage' do
 

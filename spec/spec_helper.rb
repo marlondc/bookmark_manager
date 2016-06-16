@@ -9,6 +9,7 @@ require 'capybara/rspec'
 require 'rspec'
 require './app/models/data_mapper_setup'
 require 'database_cleaner'
+require_relative 'web_helper'
 
 Capybara.app = BookmarkManager
 RSpec.configure do |config|
@@ -32,4 +33,7 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.include SessionHelpers
+  
 end
