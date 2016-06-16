@@ -4,7 +4,7 @@
     <form action = "/users" method = "post">
     	<label for="email">
     		E-Mail:
-    			<input type = 'text' name = 'email' placeholder = 'Enter your Email' value='<%= @user.email %>'>
+    			<input type = 'email' name = 'email'  autocomplete = 'off' placeholder = 'Enter your Email' value='<%= @user.email %>' required>
     	</label>
     	<label for="password">
     		Password:
