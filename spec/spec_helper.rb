@@ -7,7 +7,7 @@ require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-
+require_relative 'helpers/session'
 require './app/app.rb'
 require 'database_cleaner'
 
@@ -38,5 +38,7 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
+  config.include SessionHelpers
 
 end
