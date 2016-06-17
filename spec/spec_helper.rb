@@ -10,6 +10,7 @@ require 'rspec'
 require_relative 'helpers/session'
 require './app/app.rb'
 require 'database_cleaner'
+require 'timecop'
 
 Capybara.app = BookmarkManager
 
